@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: accounts
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - lockin-network
+    
+  loans:
+    image: loans
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - lockin-network
+    
+  cards:
+    image: cards
+    mem_limit: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - lockin-network
+    
+networks:
+  lockin-network:
